@@ -18,6 +18,7 @@ a {
 
 body {
   padding: 20px 0 62px 0;
+  overflow-x: hidden;
 }
 
 .header,
@@ -48,6 +49,16 @@ body {
 
 .header__right img {
   width: 100%;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+@media(hover:hover) {
+  .header__right img:hover {
+    transform: scale(1.05);
+    background: rgb(220, 69, 69);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .menu {
@@ -91,7 +102,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
 .section-best__left h1 {
@@ -123,11 +133,43 @@ body {
   font-size: 20px;
   line-height: 100%;
   border: none;
+  transition: 0.5s;
+}
+
+@media(hover:hover) {
+  .section-best__left button:hover {
+    cursor: pointer;
+    gap: 20px;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .section-best__left button:active {
+    transition: 0.2s;
+    transform: scale(0.9);
+  }
 }
 
 .section-best__right {
   max-width: 680px;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-best__right img {
+  transition: 0.7s;
+  border-radius: 20px;
+}
+
+@media(hover:hover) {
+  .section-best__right img:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
 }
 
 .section-why {
@@ -189,6 +231,16 @@ body {
   height: 402px;
   object-fit: cover;
   border-radius: 50px;
+  transition: 0.7s;
+}
+
+@media(hover:hover) {
+  .gallery img:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.2);
+    transform: scale(1.05);
+  }
 }
 
 /*-----------------------------------------footer------------------------------------*/
