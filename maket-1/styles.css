@@ -198,6 +198,7 @@ body {
 }
 
 .advantage-container {
+  user-select: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
