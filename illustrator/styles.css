@@ -1,0 +1,358 @@
+@font-face {
+  font-family: 'Philosopher-Bold';
+  src: url('./public/fonts/Philosopher-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'Philosopher-Regular';
+  src: url('./public/fonts/Philosopher-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  font-style: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #005c7d;
+  background-color: #f9f9f9;
+}
+header {
+  background-color: #008daa;
+  color: rgb(205, 205, 205);
+  padding: 0.5rem 0;
+}
+header .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  text-decoration: underline;
+}
+header a:hover {
+  filter: brightness(1.3);
+  color: white;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.menu img {
+  width: 40px;
+}
+
+.wrapper {
+  max-width: 722px;
+  width: 100%;
+}
+
+.hero {
+  font-family: Philosopher-Bold;
+  text-align: center;
+  padding: 0 1rem 1rem 1rem;
+  background-color: #f3f3f3;
+  color: #008daa;
+}
+.hero .list {
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+  margin: 0;
+  padding: 0 0 4rem 0;
+  color: #008daa;
+}
+.hero .list li:first-of-type {
+  list-style-type: none;
+}
+.hero .list li a:hover {
+  color: #eb477b;
+}
+.hero img {
+  max-width: 300px;
+  margin: 2rem 0;
+}
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+}
+.hero-container img {
+  max-width: 410px;
+  width: 100%;
+}
+.btn-primary {
+  background-color: #008daa;
+  border-color: #008daa;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+}
+.hero-container .btn:hover {
+  background-color: #eb477b;
+  border-color: #eb477b;
+}
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #005c7d;
+  font-family: Philosopher-Regular;
+}
+.icon-block {
+  text-align: center;
+  margin-top: 2rem;
+}
+.icon-block img {
+  width: 60px;
+}
+.icon-block p {
+  color: #008daa;
+  font-size: 12px;
+}
+
+.advantages {
+  background-color: #f3f3f3;
+}
+.advantages-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: 360px;
+  font-weight: 600;
+}
+.advantages-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.advantages-list span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: solid 2px #005c7d;
+}
+
+.faq-section {
+  padding: 60px 15px;
+  text-align: center;
+}
+.faq-section h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.card {
+  border: none;
+  background: none;
+  text-align: left;
+}
+.card .btn {
+  text-align: left;
+
+}
+.card-header {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.btn-link {
+  font-weight: 600;
+  color: #00789c;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.btn-link:hover,
+.btn-link:focus {
+  text-decoration: underline;
+  color: #005f75;
+}
+.card-body {
+  color: #4b4b4b;
+  text-align: left;
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+.question-footer {
+  margin-top: 3rem;
+}
+.question-footer p {
+  font-size: 1.3rem;
+  color: #00789c;
+  font-weight: 500;
+}
+.question-footer a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00789c;
+  text-decoration: underline;
+}
+.question-footer a:hover {
+  color: #eb477b;
+}
+
+.reviews-section {
+  background-color: #f5f5f5;
+  padding: 60px 15px;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #005c7d;
+}
+.carousel {
+  min-height: 400px;
+}
+.carousel-item p {
+  font-size: 1rem;
+  color: #005c7d;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+.carousel-control-prev {
+  filter: invert(0.5);
+  transform: translate(-120px);
+}
+.carousel-control-next {
+  filter: invert(0.5);
+  transform: translate(120px);
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: solid 5px gray;
+}
+
+.review-author {
+  font-weight: bold;
+  color: #00789c;
+}
+
+.review-year {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #005c7d;
+}
+
+.review-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  background-color: #ffffff;
+  padding: 60px 15px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #005c7d;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contact-link span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #005c7d;
+}
+.contact-link img {
+  max-width: 100px;
+  width: 100%;
+}
+.contact-link a {
+  font-size: 1.1rem;
+  color: #00789c;
+  text-decoration: underline;
+}
+.contact-link a:hover {
+  color: #eb477b;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.social-icons img {
+  width: 40px;
+}
+.social-icons img:hover {
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.footer {
+  background-color: #005c7d;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 20px 15px;
+}
+
+.footer a {
+  color: #bce3ef;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+@media(max-width: 991px) {
+  .carousel-control-prev {
+    transform: translate(0);
+  }
+  .carousel-control-next {
+    transform: translate(0);
+  }
+}
+
+@media(max-width: 768px) {
+  .hero-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media(max-width: 576px) {
+  .hero .list {
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 0 2rem 0;
+  }
+}
