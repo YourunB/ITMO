@@ -86,6 +86,7 @@ body {
 .section-intro {
   background: url('../../public/фон.png') no-repeat;
   background-size: cover;
+  animation: slide-background 1s linear;
 }
 
 .intro-wrapper {
@@ -297,5 +298,14 @@ body {
   .contacts__item {
     max-width: 100%;
     text-align: center;
+  }
+}
+
+@keyframes slide-background {
+  0% {
+    background-position-x: 10000px;
+  }
+  100% {
+    background-position-x: 0;
   }
 }
