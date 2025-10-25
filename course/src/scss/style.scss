@@ -1,0 +1,301 @@
+:root {
+  --color-bg-dark: #040440;
+  --color-accent: #c93555;
+  --color-course-bg: #130B5B;
+  --color-text-light: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  font-style: inherit;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+body {
+  background: var(--color-bg-dark);
+  color: var(--color-text-light);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.header__title {
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 200px;
+}
+
+.header__nav,
+.menu {
+  display: flex;
+  gap: 40px;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  font-weight: 700;
+}
+
+.signup-button {
+  border-radius: 30px;
+  padding: 20px 25px;
+  border: none;
+  background: var(--color-accent);
+  color: var(--color-text-light);
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+.intro-profession {
+  position: relative;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.intro-profession::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15px;
+  height: 5px;
+  width: 100px;
+  background: var(--color-accent);
+}
+
+.section-intro {
+  background: url('../../public/фон.png') no-repeat;
+  background-size: cover;
+}
+
+.intro-wrapper {
+  padding: 10rem 4rem 6rem 4rem;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.intro-title {
+  max-width: 300px;
+}
+
+.intro-subtitle {
+  padding-bottom: 3rem;
+}
+
+.intro-details {
+  margin-top: 2rem;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 600px;
+}
+
+.intro-details p {
+  margin: 0;
+}
+
+.intro-details p:last-of-type {
+  font-weight: 700;
+}
+
+.section-info {
+  padding: 4rem;
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.section-info__image {
+  max-width: 400px;
+  width: 100%;
+}
+
+.info-box__title,
+.section-course__title {
+  position: relative;
+  padding-left: 10px;
+}
+
+.info-box__title::before,
+.section-course__title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  height: calc(100% + 15px);
+  width: 5px;
+  background: var(--color-accent);
+}
+
+.section-course {
+  background: var(--color-course-bg);
+}
+
+.course-wrapper {
+  padding: 4rem;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.course-box {
+  display: flex;
+  gap: 40px;
+}
+
+.section-course__button {
+  border-radius: 20px;
+  border: none;
+  background: var(--color-accent);
+  color: var(--color-text-light);
+  font-weight: 700;
+  font-size: 1rem;
+  max-width: 300px;
+  height: 100px;
+  transition: 0.5s;
+}
+
+@media(hover:hover) {
+  .section-course__button:hover,
+  .signup-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.section-course__button:active,
+.signup-button:active {
+  transform: scale(0.8);
+  transition: 0.2s;
+}
+
+.footer {
+  padding: 1rem 4rem;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.footer__contacts {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.contacts__item {
+  margin: 0;
+  max-width: 200px;
+}
+
+@media(max-width:991px) {
+  .section-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .course-box {
+    flex-wrap: wrap;
+  }
+
+  .section-course__button {
+    margin: auto;
+  }
+
+  .header,
+  .intro-wrapper,
+  .course-wrapper,
+  .section-info,
+  .footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media(max-width:767px) {
+  .header__nav,
+  .menu {
+    display: flex;
+    gap: 10px;
+  }
+
+  .header__title {
+    max-width: 100px;
+  }
+}
+
+@media(max-width: 575px) {
+  .header__title {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header__nav,
+  .menu {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu__item {
+    width: 100%;
+  }
+
+  .intro-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .intro-wrapper .signup-button {
+    margin: auto;
+    display: block;
+  }
+
+  .intro-details {
+    gap: 10px;
+  }
+
+  .intro-details__item {
+    width: 100%;
+  }
+
+  .footer__contacts {
+    display: block;
+  }
+
+  .contacts__item {
+    max-width: 100%;
+    text-align: center;
+  }
+}
